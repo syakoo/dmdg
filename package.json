@@ -1,0 +1,51 @@
+{
+  "name": "d3g",
+  "version": "0.0.0",
+  "description": "drawing dir dependency graph",
+  "main": "./dist/index.js",
+  "bin": {
+    "d3g": "./bin/d3g.js"
+  },
+  "scripts": {
+    "prepare": "npx simple-git-hooks",
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint --ignore-path .eslintignore --cache .",
+    "lint:prettier": "prettier --ignore-path .eslintignore --cache . --check",
+    "fix": "run-s fix:*",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "build": "rimraf dist && rollup -c"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist"
+  ],
+  "homepage": "",
+  "keywords": [],
+  "author": "syakoo",
+  "license": "MIT",
+  "dependencies": {
+    "dependency-cruiser": "^11.14.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@syakoo/emoji-prefix-commit": "github:syakoo/emoji-prefix-commit",
+    "@types/node": "^18.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.6.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.77.2",
+    "simple-git-hooks": "^2.8.0",
+    "typescript": "^4.7.4"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx emoji-prefix-commit"
+  }
+}
