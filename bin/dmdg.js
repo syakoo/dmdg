@@ -1,3 +1,1 @@
-const run = require('../dist/index.js');
-
-run();
+require('../dist/index.js');
