@@ -14,8 +14,7 @@
     "fix": "run-s fix:*",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
-    "build": "rimraf dist && rollup -c",
-    "publish": "npm run build && npm publish"
+    "build": "rimraf dist && rollup -c"
   },
   "files": [
     "package.json",
