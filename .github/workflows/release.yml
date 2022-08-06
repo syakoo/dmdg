@@ -20,6 +20,12 @@ jobs:
           node-version: 16.x
           registry-url: "https://registry.npmjs.org"
 
+      - name: install dependencies
+        run: npm ci
+
+      - name: build
+        run: npm run build
+
       - name: current-package-version
         run: node -p -e '`CURRENT_PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
 
