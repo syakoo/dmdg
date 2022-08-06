@@ -15,7 +15,7 @@ const banner = `/*!
  * @type {import('rollup').RollupOptions}
  */
 const config = {
-  input: path.resolve(__dirname, "src/index.ts"),
+  input: path.resolve(__dirname, "src/cli.ts"),
   output: [
     {
       file: pkg.main,
