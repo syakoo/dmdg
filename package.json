@@ -1,6 +1,6 @@
 {
   "name": "@syakoo/dmdg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "dir module dependency graph",
   "main": "./dist/index.js",
   "bin": {
