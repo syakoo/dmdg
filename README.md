@@ -28,7 +28,7 @@ The default graph depth is 5, but you can set it yourself:
 npx @syakoo/dmdg draw ./src --maxDepth=10
 ```
 
-> **warning**
+> **Warning**
 > Since mermaid is used to draw the graph, if the graph is too large, the drawing will fail.
 > It is recommended that maxDepth be set to an appropriate value.
 
