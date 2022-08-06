@@ -1,10 +1,10 @@
 {
-  "name": "d3g",
+  "name": "@syakoo/dmdg",
   "version": "0.0.0",
-  "description": "drawing dir dependency graph",
+  "description": "dir module dependency graph",
   "main": "./dist/index.js",
   "bin": {
-    "d3g": "./bin/d3g.js"
+    "dmdg": "./bin/dmdg.js"
   },
   "scripts": {
     "prepare": "npx simple-git-hooks",
