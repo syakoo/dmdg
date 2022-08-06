@@ -27,6 +27,7 @@
   "author": "syakoo",
   "license": "MIT",
   "dependencies": {
+    "cac": "^6.7.12",
     "dependency-cruiser": "^11.14.1"
   },
   "devDependencies": {
@@ -38,6 +39,7 @@
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-define-config": "^1.6.0",
+    "eslint-import-resolver-typescript": "^3.4.0",
     "eslint-plugin-import": "^2.26.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
