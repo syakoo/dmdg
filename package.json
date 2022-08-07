@@ -22,7 +22,8 @@
     "LICENSE",
     "dist"
   ],
-  "homepage": "",
+  "homepage": "https://www.npmjs.com/package/@syakoo/dmdg",
+  "repository": "https://github.com/syakoo/dmdg",
   "keywords": [],
   "author": "syakoo",
   "license": "MIT",
