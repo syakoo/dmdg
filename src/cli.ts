@@ -1,5 +1,6 @@
 import cac from 'cac';
-import { drawDependencyGraph } from './drawer';
+import { drawDependencyGraph } from '~/drawer';
+import { resolveTsConfigPath } from '~/tsConfigPathResolver';
 
 const cli = cac();
 
@@ -18,7 +19,7 @@ cli
   .action(async (dirs: string[], option: CLIOption) => {
     const resolvedOption = {
       maxDepth: option.maxDepth,
-      tsConfig: option.tsConfig,
+      tsConfig: resolveTsConfigPath(option.tsConfig),
     };
 
     for (const dir of dirs) {
