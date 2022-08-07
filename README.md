@@ -8,7 +8,7 @@ npm install -D @syakoo/dmdg
 
 # Usage
 
-The following will generate a dependency graph for a module in `./src` as README.md:
+The following will generate a dependency graph for a module in `./src` as README.md ([here](https://github.com/syakoo/dmdg/tree/master/src)):
 
 ```bash
 npx @syakoo/dmdg draw ./src
