@@ -1,9 +1,9 @@
 // @ts-check
-import path from "path";
+import path from 'path';
 
-import typescript from "@rollup/plugin-typescript";
+import typescript from '@rollup/plugin-typescript';
 
-import pkg from "./package.json";
+import pkg from './package.json';
 
 const banner = `/*!
   ${pkg.name} v${pkg.version}
@@ -15,18 +15,18 @@ const banner = `/*!
  * @type {import('rollup').RollupOptions}
  */
 const config = {
-  input: path.resolve(__dirname, "src/cli.ts"),
+  input: path.resolve(__dirname, 'src/cli.ts'),
   output: [
     {
       file: pkg.main,
-      format: "cjs",
-      sourcemap: "inline",
+      format: 'cjs',
+      sourcemap: 'inline',
       banner,
     },
   ],
   plugins: [
     typescript({
-      tsconfig: path.resolve(__dirname, "./tsconfig.json"),
+      tsconfig: path.resolve(__dirname, './tsconfig.json'),
     }),
   ],
 };
