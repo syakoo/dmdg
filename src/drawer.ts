@@ -18,6 +18,7 @@ export function drawDependencyGraph(entryDir: string, option: CruiseOption) {
       exclude: ['node_modules'],
       outputType: 'mermaid',
       maxDepth: option.maxDepth ?? 5,
+      focus: entryDir.replace('./', ''),
       ruleSet: {
         // Without this setting, path aliases will not be resolved.
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
