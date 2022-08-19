@@ -5,31 +5,34 @@
 ```mermaid
 flowchart LR
 
-subgraph 0["src"]
-1["cli.ts"]
-2["drawer.ts"]
-8["tsConfigPathResolver.ts"]
-9["types.d.ts"]
-end
-subgraph 3["dependency-cruiser"]
-subgraph 4["config-utl"]
-5["extract-ts-config"]
+0["cac"]
+subgraph 1["dependency-cruiser"]
+subgraph 2["config-utl"]
+3["extract-ts-config"]
 end
 end
-6["fs"]
-7["path"]
-1-->2
-1-->8
-2-->5
-2-->6
-2-->7
-8-->6
-8-->7
+4["fs"]
+5["path"]
+subgraph 6["src"]
+7["cli.ts"]
+8["drawer.ts"]
+9["tsConfigPathResolver.ts"]
+a["types.d.ts"]
+end
+7-->8
+7-->9
+7-->0
+8-->1
+8-->3
+8-->4
+8-->5
+9-->4
+9-->5
 
-style 1 fill:lime,color:black
-style 2 fill:lime,color:black
+style 7 fill:lime,color:black
 style 8 fill:lime,color:black
 style 9 fill:lime,color:black
+style a fill:lime,color:black
 ```
 
 <!-- DMDG END -->
