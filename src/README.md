@@ -1,40 +1,38 @@
 # Module Dependency Graph in src
 
 <!-- DMDG BEGIN -->
+
 ```mermaid
 flowchart LR
 
-subgraph 0["dependency-cruiser"]
-subgraph 1["config-utl"]
-2["extract-ts-config"]
+0["cac"]
+subgraph 1["dependency-cruiser"]
+subgraph 2["config-utl"]
+3["extract-ts-config"]
 end
 end
-3["fs"]
-subgraph 4["node_modules"]
-5["cac"]
-6["dependency-cruiser"]
+4["fs"]
+5["path"]
+subgraph 6["src"]
+7["cli.ts"]
+8["drawer.ts"]
+9["tsConfigPathResolver.ts"]
+a["types.d.ts"]
 end
-7["path"]
-subgraph 8["src"]
-9["cli.ts"]
-a["drawer.ts"]
-b["tsConfigPathResolver.ts"]
-c["types.d.ts"]
-end
-9-->a
-9-->b
+7-->8
+7-->9
+7-->0
+8-->1
+8-->3
+8-->4
+8-->5
+9-->4
 9-->5
-a-->6
-a-->2
-a-->3
-a-->7
-b-->3
-b-->7
 
-style 6 fill:lime,color:black
+style 7 fill:lime,color:black
+style 8 fill:lime,color:black
 style 9 fill:lime,color:black
 style a fill:lime,color:black
-style b fill:lime,color:black
-style c fill:lime,color:black
 ```
+
 <!-- DMDG END -->

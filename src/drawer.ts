@@ -22,6 +22,7 @@ export function drawDependencyGraph(entryDir: string, option: CruiseOption) {
       },
       collapse: '^node_modules/[^/]+',
       focus: entryDir.replace('./', ''),
+      baseDir: '.',
       ruleSet: {
         // Without this setting, path aliases will not be resolved.
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
